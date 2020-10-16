@@ -1,0 +1,31 @@
+{
+    "id": "de.dresden-elektronik.zigbee",
+    "version": "1.0.1",
+    "compatibility": ">=4.0.0",
+    "sdk": 2,
+    "name": {
+      "en": "Dresden Elektronik"
+    },
+    "tags": {
+        "en": [
+            "Dresden Elektronik",
+            "Hera"
+        ]
+    },
+    "description": {
+      "en": "Control your LED drivers",
+      "nl": " Bestuur je LED drivers"
+    },
+    "category": [
+      "lights"
+    ],
+    "permissions": [],
+    "images": {
+      "large": "/assets/images/large.png",
+      "small": "/assets/images/small.png"
+    },
+    "author": {
+      "name": "Kaalus",
+      "email": "homey@kaalus.nl"
+    }
+  }
