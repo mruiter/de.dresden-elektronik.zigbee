@@ -1,13 +1,15 @@
-'use strict';
+"use strict";
 
-const Homey = require('homey');
+const Homey = require("homey");
 
-class DresdenElektronikZigbee extends Homey.App {
-	
-	onInit() {
-		this.log('Started DresdenElektronikZigbee...');
-	}
-	
+// Enable zigbee-cluster logging
+ const { Util } = require('homey-zigbeedriver');
+ Util.debugZigbeeClusters(true);
+
+class DresdenZigbeeApp extends Homey.App {
+  onInit() {
+    this.log("Dresden Zigbee app initiating...");
+  }
 }
 
-module.exports = DresdenElektronikZigbee;
+module.exports = DresdenZigbeeApp;

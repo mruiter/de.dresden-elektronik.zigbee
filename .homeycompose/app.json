@@ -1,31 +1,37 @@
 {
-    "id": "de.dresden-elektronik.zigbee",
-    "version": "1.0.1",
-    "compatibility": ">=4.0.0",
-    "sdk": 2,
-    "name": {
-      "en": "Dresden Elektronik"
-    },
-    "tags": {
-        "en": [
-            "Dresden Elektronik",
-            "Hera"
-        ]
-    },
-    "description": {
-      "en": "Control your LED drivers",
-      "nl": " Bestuur je LED drivers"
-    },
-    "category": [
-      "lights"
-    ],
-    "permissions": [],
-    "images": {
-      "large": "/assets/images/large.png",
-      "small": "/assets/images/small.png"
-    },
-    "author": {
-      "name": "Kaalus",
-      "email": "homey@kaalus.nl"
+  "id": "com.dresden",
+  "sdk": 3,
+  "name": {
+    "nl": "Dredsen Led Controllers",
+    "en": "Dresden Led Controllers"
+  },
+  "description": {
+	"nl": "Dresden Led Controllers (ZigBee)",
+    "en": "Dresden Led Controllers (ZigBee)"
+  },
+  "category": "lights",
+  "brandColor": "#C70039",
+  "version": "1.0.2",
+  "compatibility": ">=5.0.0",
+  "author": {
+    "name": "Marco Ruiter",
+    "email": "mruiter@tuxweb.nl"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "MarcoRuiter"
+      }
     }
-  }
+  },
+  "images": {
+    "large": "assets/images/large.png",
+    "small": "assets/images/small.png"
+  },
+  "speech": [],
+  "permissions": [],
+  "bugs": {
+    "url": "https://github.com/mruiter/com.dresden/issues"
+  },
+  "source": "https://github.com/mruiter/com.dresden"
+}

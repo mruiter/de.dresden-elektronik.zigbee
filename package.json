@@ -1,11 +1,33 @@
 {
-  "name": "de.dresden-elektronic.zigbee",
+  "name": "com.dresden",
   "version": "1.0.0",
+  "description": "Get control of your Dresden controllers",
   "main": "app.js",
-  "devDependencies": {
-    "homey": "^2.3.5"
-  },
   "dependencies": {
-    "homey-meshdriver": "^1.3.24"
-  }
+    "color-space": "^1.16.0",
+    "cookie": "^0.3.1",
+    "homey-log": "git+https://github.com/athombv/node-homey-log.git",
+    "homey-zigbeedriver": "^1.6.1",
+    "hsluv": "0.0.3",
+    "json-stringify-safe": "^5.0.1",
+    "lsmod": "^1.0.0",
+    "stack-trace": "0.0.10",
+    "uuid": "^3.3.2",
+    "zigbee-clusters": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "run": "homeyConfig compose && athom project --run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mruiter/com.dresden"
+  },
+  "author": "Marco Ruiter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mruiter/com.dresden/issues"
+  },
+  "homepage": "https://github.com/mruiter/com.dresden#readme"
 }

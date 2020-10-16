@@ -1,47 +1,61 @@
 {
-  "id": "de.dresden-elektronik.zigbee",
-  "version": "1.0.0",
-  "compatibility": ">=4.0.0",
-  "sdk": 2,
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.dresden",
+  "sdk": 3,
   "name": {
-    "en": "Dresden Elektronik Zigbee Drivers"
-  },
-  "tags": {
-    "en": [
-      "Dresden Elektronik",
-      "Hera"
-    ]
+    "nl": "Dredsen Led Controllers",
+    "en": "Dresden Led Controllers"
   },
   "description": {
-    "en": "Let Homey control LED drivers manufactured by Dresden Elektronik.",
-    "nl": "Laat Homey LED drivers aansturen welke gefabriceerd zijn door Dresden Elektronik."
+    "nl": "Dresden Led Controllers (ZigBee)",
+    "en": "Dresden Led Controllers (ZigBee)"
   },
-  "category": [
-    "lights"
-  ],
-  "permissions": [],
-  "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
-  },
+  "category": "lights",
+  "brandColor": "#C70039",
+  "version": "1.0.2",
+  "compatibility": ">=5.0.0",
   "author": {
-    "name": "Kaalus",
-    "email": "homey@kaalus.nl"
+    "name": "Marco Ruiter",
+    "email": "mruiter@tuxweb.nl"
   },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "MarcoRuiter"
+      }
+    }
+  },
+  "images": {
+    "large": "assets/images/large.png",
+    "small": "assets/images/small.png"
+  },
+  "speech": [],
+  "permissions": [],
+  "bugs": {
+    "url": "https://github.com/mruiter/com.dresden/issues"
+  },
+  "source": "https://github.com/mruiter/com.dresden",
   "drivers": [
     {
-      "id": "phoscon-fls-ct-lp",
-      "name": {
-        "en": "Phoscon FLS-CT lp"
-      },
       "class": "light",
+      "icon": "/drivers/FLS-CT/assets/icon.svg",
+      "images": {
+        "large": "/drivers/FLS-CT/assets/images/large.png",
+        "small": "/drivers/FLS-CT/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -50,15 +64,32 @@
           "setOnDim": false
         }
       },
+      "name": {
+        "nl": "Dresden WW/CW LED Controller",
+        "en": "Dresden WW/CW LED Controller"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 19,
+          "usageOff": 0.1
+        }
+      },
       "zigbee": {
         "manufacturerName": "dresden elektronik",
         "productId": "FLS-CT",
-        "deviceId": [
-          544
-        ],
-        "profileId": [
-          49246
-        ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "endpoints": {
+          "10": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the power to the LED driver. It should be added automatically afterwards.",
@@ -66,28 +97,110 @@
           }
         }
       },
-      "images": {
-        "large": "/drivers/phoscon-fls-ct-lp/assets/images/large.png",
-        "small": "/drivers/phoscon-fls-ct-lp/assets/images/small.png"
-      },
+      "id": "FLS-CT",
       "settings": [
         {
           "id": "transition_time",
           "type": "number",
           "label": {
-            "en": "Dim duration",
-            "nl": "Dim duur"
+            "en": "Transition Time"
           },
           "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another. Note: this setting can be overriden by the duration value in a Flow Card.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander. Let op: deze instelling kan tijdelijk overschreven worden door de dim duur waarde in een Flow Card.",
-            "de": "Diese Einstellung bestimmt die Zeit in Sekunden, die für das Dimmen von einer auf die andere Stufe benötigt wird. Hinweis: diese Einstellung kann durch den Dauer-Wert in einer Flow-Karte überschrieben werden."
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
           },
           "value": 1,
-          "units": {
-            "en": "s",
-            "nl": "s"
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/FLS-PP3/assets/icon.svg",
+      "images": {
+        "large": "/drivers/FLS-PP3/assets/images/large.png",
+        "small": "/drivers/FLS-PP3/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "nl": "Dresden RGB Controller",
+        "en": "Dresden RGB Controller"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 19,
+          "usageOff": 0.1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "dresden elektronik",
+        "productId": "FLS-PP3",
+        "deviceId": 528,
+        "profileId": 49246,
+        "endpoints": {
+          "10": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Toggle the power to the LED driver. It should be added automatically afterwards.",
+            "nl": "Schakel de voeding van de LED driver één keer uit en weer aan. Deze wordt hierna dan automatisch toegevoegd."
+          }
+        }
+      },
+      "id": "FLS-PP3",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
           },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
           "attr": {
             "min": 0,
             "max": 6553

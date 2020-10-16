@@ -1,0 +1,36 @@
+{
+  "name": {
+	"nl": "Dresden WW/CW LED Controller",
+    "en": "Dresden WW/CW LED Controller"
+  },
+  "$extends": ["light_white_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 19,
+      "usageOff": 0.1
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "dresden elektronik",
+    "productId": "FLS-CT",
+	"deviceId": 544,
+    "profileId": 49246,
+    "endpoints": {
+      "10": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Toggle the power to the LED driver. It should be added automatically afterwards.",
+		"nl": "Schakel de voeding van de LED driver één keer uit en weer aan. Deze wordt hierna dan automatisch toegevoegd."
+      }
+    }
+  }
+}

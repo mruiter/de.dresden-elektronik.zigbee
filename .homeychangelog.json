@@ -1,8 +1,10 @@
-{
-  "1.0.0": {
-    "en": "Initial version"
+{  
+  "1.0.2": {
+    "en": "SDKv3 Homey firmware V5+ Version  / Added RGB Controller"
   },
   "1.0.1": {
     "en": "Update app information"
+  },
+  "1.0.0": {
+    "en": "Initial version"
   }
-}
