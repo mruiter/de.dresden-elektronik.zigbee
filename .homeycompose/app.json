@@ -1,5 +1,5 @@
 {
-  "id": "com.dresden",
+  "id": "de.dresden-elektronik.zigbee",
   "sdk": 3,
   "name": {
     "nl": "Dredsen Led Controllers",

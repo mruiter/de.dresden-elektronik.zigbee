@@ -1,6 +1,6 @@
 {
-  "name": "com.dresden",
-  "version": "1.0.0",
+  "name": "de.dresden-elektronik.zigbee",
+  "version": "1.0.2",
   "description": "Get control of your Dresden controllers",
   "main": "app.js",
   "dependencies": {
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mruiter/com.dresden"
+    "url": "git+https://github.com/mruiter/de.dresden-elektronik.zigbee"
   },
   "author": "Marco Ruiter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mruiter/com.dresden/issues"
+    "url": "https://github.com/mruiter/de.dresden-elektronik.zigbee/issues"
   },
-  "homepage": "https://github.com/mruiter/com.dresden#readme"
+  "homepage": "https://github.com/mruiter/de.dresden-elektronik.zigbee#readme"
 }
