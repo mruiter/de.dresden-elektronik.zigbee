@@ -1,4 +1,10 @@
-{  
+{   
+  "1.0.4": {
+    "en": "Corrected GitHub links"
+  }, 
+  "1.0.3": {
+    "en": "Readme Cleanup"
+  },
   "1.0.2": {
     "en": "SDKv3 Homey firmware V5+ Version  / Added RGB Controller"
   },

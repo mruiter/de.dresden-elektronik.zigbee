@@ -11,7 +11,7 @@
   },
   "category": "lights",
   "brandColor": "#C70039",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Marco Ruiter",
@@ -31,7 +31,7 @@
   "speech": [],
   "permissions": [],
   "bugs": {
-    "url": "https://github.com/mruiter/com.dresden/issues"
+    "url": "https://github.com/mruiter/de.dresden-elektronik.zigbee/issues"
   },
-  "source": "https://github.com/mruiter/com.dresden"
+  "source": "https://github.com/mruiter/de.dresden-elektronik.zigbee"
 }
